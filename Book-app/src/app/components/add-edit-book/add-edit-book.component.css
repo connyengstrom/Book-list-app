@@ -1,0 +1,11 @@
+.h1-block {
+    padding: 4rem 0rem;
+    background-color: var(--blueBackground);
+}
+.h1-block h1 {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #223c51;
+    font-size: 3rem;
+    margin-bottom: 0 !important;
+}

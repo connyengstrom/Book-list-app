@@ -1,0 +1,45 @@
+.h1-block {
+    padding: 4rem 0rem;
+    background-color: var(--blueBackground);
+}
+.h1-block h1 {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #223c51;
+    font-size: 3rem;
+    margin-bottom: 0 !important;
+}
+
+.card {
+    padding: 1rem;
+}
+.card-title, .card-subtitle, .card-text, .card-genre {
+    font-family: "Montserrat" !important;
+}
+
+.card-title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #333;
+}
+.card-subtitle {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.card-genre {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.card {
+    background-color: #f3f3f3;
+}
+
+.bold-text {
+    font-weight: 600;
+}

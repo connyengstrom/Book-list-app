@@ -1,0 +1,39 @@
+<div class="container d-flex h-100 flex-column justify-content-center">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center">Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mb-3">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              formControlName="username"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }"
+            />
+            <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="invalid-feedback">
+              Username is required
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }"
+            />
+            <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback">
+              Password is required
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mb-3" [disabled]="loginForm.invalid">Login</button>
+        </form>
+        <span class="encourage-text">Don't have an account? <a class="" routerLink="/register">Register here</a></span>
+        <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+      </div>
+    </div>
+  </div>
+  

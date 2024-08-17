@@ -1,0 +1,68 @@
+
+<div class="h1-block d-flex justify-content-center mb-4">
+  <h1 class="container">{{ isEditMode ? 'Edit Book' : 'Add Book' }}</h1>
+  </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      
+      <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            formControlName="title"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': bookForm.get('title')?.invalid && bookForm.get('title')?.touched }"
+          />
+          <div *ngIf="bookForm.get('title')?.invalid && bookForm.get('title')?.touched" class="invalid-feedback">
+            Title is required
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="author">Author</label>
+          <input
+            type="text"
+            id="author"
+            formControlName="author"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': bookForm.get('author')?.invalid && bookForm.get('author')?.touched }"
+          />
+          <div *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched" class="invalid-feedback">
+            Author is required
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="genre">Genre</label>
+          <input
+            type="text"
+            id="genre"
+            formControlName="genre"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': bookForm.get('genre')?.invalid && bookForm.get('genre')?.touched }"
+          />
+          <div *ngIf="bookForm.get('genre')?.invalid && bookForm.get('genre')?.touched" class="invalid-feedback">
+            Genre is required
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label for="publishedDate">Published Date</label>
+          <input
+            type="date"
+            id="publishedDate"
+            formControlName="publishedDate"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': bookForm.get('publishedDate')?.invalid && bookForm.get('publishedDate')?.touched }"
+          />
+          <div *ngIf="bookForm.get('publishedDate')?.invalid && bookForm.get('publishedDate')?.touched" class="invalid-feedback">
+            Published Date is required
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="bookForm.invalid">
+          {{ isEditMode ? 'Update' : 'Add' }} Book
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

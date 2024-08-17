@@ -1,0 +1,118 @@
+/* Enhance navbar-brand font and spacing */
+.navbar-brand {
+font-weight: bold;
+font-size: 1.5rem;
+color: #223c51;
+}
+
+/* Ensure the navbar-toggler aligns correctly */
+.navbar-toggler {
+border: none;
+}
+
+/* Adjust the background color and size of the navbar-toggler-icon */
+.navbar-toggler-icon {
+background-color: #333;
+width: 30px;
+height: 3px;
+position: relative;
+display: inline-block;
+transition: all 0.3s;
+background-image: none;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+content: '';
+position: absolute;
+left: 0;
+width: 30px;
+height: 3px;
+background-color: #333;
+transition: all 0.3s;
+}
+
+.navbar-toggler-icon::before {
+top: -8px;
+}
+
+.navbar-toggler-icon::after {
+top: 8px;
+}
+
+/* Transition for the toggler */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+transform: rotate(90deg);
+}
+
+/* Add padding to the navbar links */
+.nav-link {
+padding-left: 1rem !important;
+padding-right: 1rem !important;
+font-size: 1rem;
+}
+
+/* Center the toggle and logout buttons */
+.navbar .btn {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.fa-moon, .fa-sun {
+vertical-align: middle;
+display: inline-block;
+font-size: 1.5rem; /* Adjust the size as needed */
+padding: 0.25rem;
+color: #ccc;
+}
+
+.dark-mode-btn {
+    background-color: #666;
+    border: 2px solid #666;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+  .menu-border {
+    border-bottom: 1px solid #000;
+  }
+
+  .navbar-brand {
+    margin-left: 15px;
+  }
+
+  .nav-link {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #000;
+  }
+  .nav-link:hover {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #777;
+  }
+
+  @media (min-width: 992px) {
+    .menu-border {
+      border: none;
+    }
+  }
+
+  .mat-mdc-slide-toggle {
+    --mdc-switch-selected-handle-color: #ffbb1c !important;
+    --mdc-switch-selected-pressed-handle-color: #ffbb1c !important;
+    --mdc-switch-selected-pressed-state-layer-color: #ffbb1c !important;
+    --mdc-switch-selected-hover-state-layer-color: #ffbb1c !important;
+    --mdc-switch-selected-hover-handle-color: #ffbb1c !important;
+    --mdc-switch-selected-focus-state-layer-color: #ffbb1c !important;
+    --mdc-switch-selected-focus-handle-color: #ffbb1c !important;
+    --mdc-switch-selected-track-color: #e0e0e0 !important;
+    --mdc-switch-selected-pressed-track-color: #e0e0e0 !important;
+    --mdc-switch-selected-hover-track-color: #e0e0e0 !important;
+    --mdc-switch-selected-focus-track-color: #e0e0e0 !important;
+}

@@ -1,0 +1,28 @@
+<div class="h1-block d-flex justify-content-center mb-4">
+<h1 class="container">Books</h1>
+</div>
+<div class="container">
+    <button class="btn btn-primary mb-4" routerLink="/add-book">Add New Book</button>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6" *ngFor="let book of books">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mb-4">{{ book.title }}</h5>
+            <h6 class="card-subtitle mb-2"><span class="bold-text">Author:</span> {{ book.author }}</h6>
+            <h6 class="card-genre mb-4"><span class="bold-text">Genre:</span> {{ book.genre }}</h6>
+            <p class="card-text"><span class="bold-text">Release date:</span> {{ book.publishedDate | date }}</p>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-danger me-1" (click)="deleteBook(book.id)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+              <button class="btn btn-primary me-2" [routerLink]="['/edit-book', book.id]">
+                <i class="fas fa-edit"></i>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

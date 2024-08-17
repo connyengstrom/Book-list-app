@@ -1,0 +1,91 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --blueBackground: #b0c9de;
+  --darkBlueBackground: #213c53;
+}
+button {
+  font-family: "Montserrat" !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .navbar {
+  background-color: #666 !important;
+}
+body.dark-mode .nav-link {
+  color: #eee !important;
+}
+body.dark-mode .nav-link:hover {
+  color: #ccc !important;
+}
+body.dark-mode .navbar-brand {
+  color: #eee !important;
+}
+body.dark-mode .navbar-toggler-icon::before,
+body.dark-mode .navbar-toggler-icon::after,
+body.dark-mode .navbar-toggler-icon {
+  background-color: #ddd;
+  color: white;
+}
+
+body.dark-mode .card {
+  background-color: #666;
+  color: #fff;
+}
+body.dark-mode .h1-block h1 {
+  color: #ddd !important;
+}
+
+body.dark-mode .card-genre {
+  color: #ddd !important;
+}
+
+body.dark-mode .card-subtitle {
+  color: #ddd !important;
+}
+body.dark-mode .card-title {
+  color: #eee !important;
+}
+
+body.dark-mode .btn {
+  background-color: #666;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #777;
+}
+
+body.dark-mode .h1-block {
+  background-color: var(--darkBlueBackground);
+  color: #ccc;
+}
+
+body.dark-mode .list-group li {
+  background-color: #666;
+  color: #eee;
+}
+
+
+ol, ul {
+  padding: 0;
+}
+
+.form-control {
+  border: thin solid #555 !important;
+}
+
+
+@media (max-width: 991px) {
+  body.dark-mode .menu-border {
+    border-bottom: 1px solid #ddd !important;
+  }
+
+}

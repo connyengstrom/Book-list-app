@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" routerLink="/">The best book app</a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="!isNavbarCollapsed" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="navbarNav">
+      <div class="d-flex flex-column flex-lg-row w-100 justify-content-between">
+        <div></div>
+        <ul class="navbar-nav mr-auto mb-2 mt-2 mt-lg-0 mb-lg-0">
+          <li class="nav-item pt-1 d-flex w-100 justify-content-center menu-border border-dark">
+            <a class="nav-link" routerLink="/">Books</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row align-items-center ml-auto mt-3 mt-lg-0">
+          <mat-slide-toggle #darkModeSwitch (change)="changeTheme()" [(ngModel)]="isDarkMode" class="custom-toggle">
+          </mat-slide-toggle>
+          <button class="btn btn-danger mx-2 mt-3 mt-lg-0 mb-3 mb-lg-0" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

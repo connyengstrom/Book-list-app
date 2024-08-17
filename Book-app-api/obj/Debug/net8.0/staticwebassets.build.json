@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "q56m6umMhw1H3rQz37RmkbChw68gPF4osz9YJTJ7NBM=",
+  "Source": "BookQuotesApi",
+  "BasePath": "_content/BookQuotesApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

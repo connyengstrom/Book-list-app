@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Book List</h1>
+    <div *ngIf="isLoading">Loading...</div>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+    <ul class="list-group" *ngIf="!isLoading && !errorMessage">
+      <li class="list-group-item" *ngFor="let book of books">
+        {{ book.title }} by {{ book.author }} ({{ book.publishedDate }})
+      </li>
+    </ul>
+  </div>
+  
